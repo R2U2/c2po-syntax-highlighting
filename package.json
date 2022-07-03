@@ -1,0 +1,26 @@
+{
+    "name": "c2po-highlighting",
+    "displayName": "C2PO Language Support",
+    "description": "Syntax highlighting for C2PO",
+    "publisher": "r2u2",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.68.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "c2po",
+            "aliases": ["c2po", "c2po"],
+            "extensions": [".c2po",".mltl"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "c2po",
+            "scopeName": "source.c2po",
+            "path": "./syntaxes/c2po.tmLanguage.json"
+        }]
+    }
+}
