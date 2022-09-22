@@ -28,7 +28,7 @@
 		"comment": {
 			"patterns": [{
 				"name": "comment.line.number-sign.c2po",
-				"begin": "#",
+				"begin": "--",
 				"end": "(?=^)",
 				"beginCaptures": {
 					"0": { "name": "comment.line.number-sign.c2po" }
