@@ -44,7 +44,7 @@
 		"type-keywords": {
 			"patterns": [{
 				"name": "storage.type.c2po",
-				"match": "\\b(bool|uint8|uint16|uint32|uint64|int8|int16|int32|int64|float|double|set)\\b"
+				"match": "\\b(bool|int|float|set)\\b"
 			}]
 		},
 		"intervals": {
