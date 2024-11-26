@@ -1,6 +1,6 @@
 INPUT
     a,b,c,e: bool;
-    j,k,s,t: uint8;
+    j,k,s,t: int;
     x,y,z: float;
     
 DEFINE
@@ -9,14 +9,14 @@ DEFINE
     setvar = {a,b,c};
     setint = {j,k,s};
 
-SPEC
+FTSPEC
     spec5: k && TRUE;
     spec0: G[0,5] (H[0,0]a && b);
     spec1: F[0,10](d && (k > 5));
     spec2: G[0,5](j < k);
     spec3: e U[0,3] spec2;
     unicodespec: ◊[0,3](a ∨ b ∨ ¬c) ∧ ((x ≤ y) 𝓤[3,5] (z ≠ x - y));
-
+    foreach(t:T)(t);
     
 
 -- or in a "restricted" mode ###

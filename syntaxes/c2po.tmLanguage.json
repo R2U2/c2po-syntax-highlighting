@@ -27,28 +27,28 @@
 	"repository": {
 		"comment": {
 			"patterns": [{
-				"name": "comment.line.number-sign.c2po",
+				"name": "comment.line.number-sign",
 				"begin": "--",
 				"end": "(?=^)",
 				"beginCaptures": {
-					"0": { "name": "comment.line.number-sign.c2po" }
+					"0": { "name": "comment.line.number-sign" }
 				}
 			}]
 		},
 		"block-keywords": {
 			"patterns": [{
-				"name": "keyword.control.c2po",
+				"name": "keyword.control",
 				"match": "\\b(STRUCT|INPUT|DEFINE|ATOMIC|FTSPEC|PTSPEC)\\b"
 			}]
 		},
 		"type-keywords": {
 			"patterns": [{
-				"name": "storage.type.c2po",
+				"name": "storage.type",
 				"match": "\\b(bool|int|float|set)\\b"
 			}]
 		},
 		"intervals": {
-			"name": "variable.parameter.c2po",
+			"name": "variable.parameter",
 			"begin": "\\[",
 			"end": "\\]",
 			"beginCaptures": {
@@ -58,15 +58,21 @@
 				"0": { "name": "punctuation.brack.close" }
 			}
 		},
+		"fun-calls": {
+			"patterns": [{
+				"name": "entity.name.function",
+				"match": "\\b(foreach|forsome)\\b"
+			}]
+		},
 		"tl-operators": {
 			"patterns": [{
-				"name": "keyword.operator.c2po",
+				"name": "keyword.operator",
 				"match": "\\b(G|F|U|R|O|H|S)\\b(?=\\[)"
 			}]
 		},
 		"constants": {
 			"patterns": [{
-				"name": "constant.language.c2po",
+				"name": "constant.language",
 				"match": "\\b(TRUE|FALSE|true|false|⊤|⊥|_)\\b"
 			}]
 		}
